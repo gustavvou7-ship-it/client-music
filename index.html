@@ -7,7 +7,6 @@
 <meta name="theme-color" content="#070c13">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-192.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap">
 <title>Client Music · player offline</title>
 <style>
 :root{--bg:#04070b;--panel:#0b121b;--b1:#00a6ff;--b2:#00c8ff;--b3:#9ad0ff;--tx:#e0f0ff;--mut:#6f97b8;--line:#00a6ff33;
@@ -195,19 +194,13 @@ nav{background:#02061a}
     <section class="panel" id="p-settings"><div class="page-head"><span class="eyebrow">DO SEU JEITO</span><h1>Ajustes<span>.</span></h1><p>Controle sua experiência de escuta.</p></div><div class="settings-card"><h3>Temporizador</h3><p>Pause a música automaticamente ao terminar o tempo.</p><div class="inline-form"><select id="sleepMinutes" aria-label="Duração do temporizador"><option value="15">15 minutos</option><option value="30">30 minutos</option><option value="45">45 minutos</option><option value="60">1 hora</option></select><button id="sleepStart" class="action primary">Iniciar</button><button id="sleepCancel" class="action">Cancelar</button></div><output id="sleepStatus" aria-live="polite">Temporizador desligado</output></div><div class="settings-card"><h3>Aparência e desempenho</h3><label class="setting-row">Chuva Matrix ao fundo<input id="matrixEnabled" type="checkbox" checked></label><label class="setting-row">Exibir abertura ao iniciar<input id="introEnabled" type="checkbox" checked></label><label class="setting-row">Animações reduzidas<input id="lowMotion" type="checkbox"></label><button id="replayIntro" class="action">Rever abertura Matrix</button></div><div class="settings-card"><h3>Seu armazenamento</h3><p id="storageInfo">Calculando biblioteca…</p><p>Arquivos e playlists ficam neste navegador. Limpar os dados do site remove a biblioteca. Mantenha uma cópia dos arquivos originais.</p></div></section>
     <section class="panel about" id="p-about">
       <h3><i data-ic="info"></i>Sobre o app</h3>
-      <div class="settings-card" id="androidDownload">
-        <h3>Client Music para Android</h3>
-        <p>Baixe o projeto Android com o player offline incluído. Este ZIP contém o código-fonte, não um APK pronto para instalar. Abra no Android Studio e siga o arquivo LEIA-ME para gerar o APK.</p>
-        <a class="action primary" href="downloads/client-music-android.zip" download="client-music-android.zip">Baixar projeto Android (ZIP)</a>
-        <p>A biblioteca do navegador não é transferida para o aplicativo. Importe suas músicas novamente após instalar.</p>
-      </div>
       <p><b>Player de áudio offline</b> com identidade Matrix. Importe áudio ou vídeo (MP3, WAV, OGG, M4A, FLAC, MP4…) e ouça sem internet.</p>
       <ul>
         <li><i data-ic="check"></i>Faixas salvas no aparelho: continuam aqui ao reabrir</li>
         <li><i data-ic="check"></i>Importe vários arquivos ou arraste e solte</li>
         <li><i data-ic="check"></i>Aleatório, repetir, busca e controle de volume</li>
         <li><i data-ic="check"></i>Visualizador de espectro em tempo real</li>
-        <li><i data-ic="check"></i>Controles na tela de bloqueio</li>
+        <li><i data-ic="check"></i>Reprodução local no aplicativo</li>
         <li><i data-ic="check"></i>Nada é enviado para servidores</li>
       </ul>
       <p>Atalhos: <span class="kbd">Espaço</span> tocar/pausar · <span class="kbd">N</span> próxima · <span class="kbd">P</span> anterior · <span class="kbd">1</span> <span class="kbd">2</span> <span class="kbd">7</span> abas</p>
@@ -562,6 +555,6 @@ addEventListener('keydown',e=>{
 })();
 })();
 </script>
-<script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));</script>
+
 </body>
 </html>
